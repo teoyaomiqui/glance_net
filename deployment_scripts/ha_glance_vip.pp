@@ -22,7 +22,7 @@ if ($use_glance and !$external_lb) {
   $server_names        = hiera_array('glance_names', keys($glances_address_map))
   $ipaddresses         = hiera_array('glance_ipaddresses', values($glances_address_map))
   $public_virtual_ip   = hiera('public_vip')
-  $internal_virtual_ip = hiera('glance_network_vip')
+  $internal_virtual_ip = hiera('management_vip')
 
   class { '::openstack::ha::glance':
     internal_virtual_ip => $internal_virtual_ip,
