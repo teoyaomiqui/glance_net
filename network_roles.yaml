@@ -1,15 +1,15 @@
 # Unique network role name
-- id: "example_net_role"
+- id: "glance_net_VIP"
   # Role mapping to network
-  default_mapping: "public"
+  default_mapping: "glance_net"
   properties:
     # Should be true if network role requires subnet being set
-    subnet: true
+    subnet: false
     # Should be true if network role requires gateway being set
     gateway: false
     # List of VIPs to be allocated
     vip:
          # Unique VIP name
-       - name: "vip_name"
+       - name: "glance_network"
          # Optional linux namespace for VIP
          namespace: "haproxy"
