@@ -1,7 +1,7 @@
 # Unique network role name
 - id: "glance_net_VIP"
   # Role mapping to network
-  default_mapping: "network.glance_net"
+  default_mapping: "glance_net"
   properties:
     # Should be true if network role requires subnet being set
     subnet: false

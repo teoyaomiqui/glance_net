@@ -1,0 +1,9 @@
+network_scheme:
+  transformations:
+    - action: add-br
+      name: br-glance
+    - action: add-port
+      bridge: br-glance
+      name: enp0s6.109
+  roles:
+    glance/api: br-glance

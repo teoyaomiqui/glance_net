@@ -9,7 +9,7 @@ file { "${hiera_dir}/${plugin_name}":
 
 file { "${hiera_dir}/${override_yaml}":
     ensure     => file,
-    content    => template('glance_net/glance_net_override_yaml.erb'),
-    require => File["${hiera_dir}/${plugin_name}"],
+    content    => template('glance_net/glance_net_override_yaml.erb')
+    require => File["{hiera_dir}/${plugin_name}"]
 }
 
