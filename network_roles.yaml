@@ -1,5 +1,5 @@
 - id: "glance_net_VIP"
-  default_mapping: "network.glance"
+  default_mapping: "glance"
   properties:
     subnet: false
     gateway: false
