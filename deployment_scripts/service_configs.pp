@@ -7,3 +7,9 @@ service{ $services:
 }
 nova_config {
     'glance/api_servers':  value  => $glance_endpoint 
+}
+glance_config {
+    'glance/api_servers':  value  => $glance_endpoint
+}
+Nova_config <||> ~> Service[$services]
+Glance_config <||> ~> Service[$services]

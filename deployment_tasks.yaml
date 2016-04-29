@@ -4,8 +4,8 @@
 - id: glance_net_hiera
   type: puppet
   groups: ['primary-controller', 'controller', 'compute']
-  requires: ['globals'] 
-  required_for: ['netconfig']
+  requires: ['hiera']
+  required_for: ['globals']
   parameters:
     puppet_manifest: hiera_override.pp
     puppet_modules: puppet/modules:/etc/puppet/modules
