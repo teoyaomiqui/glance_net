@@ -8,7 +8,7 @@
 #
 
 Name:           glance_net-1.0
-Version:        1.0.41
+Version:        1.0.42
 Url:            https://github.com/openstack/fuel-plugins
 Summary:        Title for glance_net plugin
 License:        Apache License Version 2.0

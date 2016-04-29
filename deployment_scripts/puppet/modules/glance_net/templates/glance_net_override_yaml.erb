@@ -4,9 +4,6 @@ network_scheme:
       name: br-glance
     - action: add-port
       bridge: br-glance
-      name: enp0s6.109
+      name: enp0s7
   roles:
     glance/api: br-glance
-      endpoints:
-        - br-glance
-

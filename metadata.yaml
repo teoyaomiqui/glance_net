@@ -3,7 +3,7 @@ name: glance_net
 # Human-readable name for your plugin
 title: Title for glance_net plugin
 # Plugin version
-version: '1.0.41'
+version: '1.0.43'
 # Description
 description: Please describe your plugin here
 # Required fuel version

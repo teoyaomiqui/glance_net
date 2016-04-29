@@ -20,3 +20,13 @@
 #    puppet_manifest: ha_endpoint.pp
 #    puppet_modules: /etc/puppet/modules
 #    timeout: 300
+
+#- id: service_configs.pp
+#  type: puppet
+#  groups: ['primary-controller', 'controller', 'compute', 'cinder']
+#  requires: ['glance']
+#  parameters:
+#    puppet_manifest: service_configs.pp
+#    puppet_modules: /etc/puppet/modules
+#    timeout: 300
+ 
