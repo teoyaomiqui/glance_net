@@ -21,13 +21,23 @@
     puppet_modules: /etc/puppet/modules
     timeout: 300
 
-- id: glance_net_service_configs
+- id: glance_net_nova_config
   type: puppet
-  groups: ['primary-controller', 'controller', 'compute', 'cinder']
-  requires: ['nova-keystone']
+  role: ['primary-controller', 'controller']
+  requires: ['openstack-network-end']
   required_for: ['upload_cirros']
   parameters:
-    puppet_manifest: service_configs.pp
+    puppet_manifest: nova_config.pp
+    puppet_modules: /etc/puppet/modules
+    timeout: 300
+
+- id: glance_net_cinder_config
+  type: puppet
+  role: ['primary-controller', 'controller']
+  requires: ['openstack-network-end']
+  required_for: ['upload_cirros']
+  parapmeters:
+    puppet_manifest: cinder_config.pp
     puppet_modules: /etc/puppet/modules
     timeout: 300
  
