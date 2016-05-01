@@ -1,11 +1,11 @@
 # Plugin name
 name: glance_net
 # Human-readable name for your plugin
-title: Title for glance_net plugin
+title: Plugin the Great
 # Plugin version
-version: '1.0.43'
+version: '1.0.0'
 # Description
-description: Please describe your plugin here
+description: separate network for glance
 # Required fuel version
 fuel_version: ['8.0']
 # Specify license of your plugin
@@ -13,7 +13,7 @@ licenses: ['Apache License Version 2.0']
 # Specify author or company name
 authors: ['Specify author or company name']
 # A link to the plugin's page
-homepage: 'https://github.com/openstack/fuel-plugins'
+homepage: 'https://github.com/openstack/puppet-glance'
 # Specify a group which your plugin implements, possible options:
 # network, storage, storage::cinder, storage::glance, hypervisor,
 # equipment

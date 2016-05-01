@@ -1,15 +1,17 @@
 notice('MODULAR: service_configs.pp')
-$services = ['nova-api', 'nova-scheduler', 'cinder-api']
-$glance_endpoint = hiera('glance_network_vip')
+$services           = ['nova-api', 'nova-scheduler', 'cinder-api']
+$network_metadata   = hiera_hash('network_metadata')
+$glance_endpoint    = $network_metadata['vips']['glance']['ipaddr']
 
 service{ $services:
-    ensure = > running
+    ensure => running,
 }
 nova_config {
-    'glance/api_servers':  value  => $glance_endpoint 
+    'glance/api_servers':  value  => $glance_endpoint ,
 }
-glance_config {
-    'glance/api_servers':  value  => $glance_endpoint
+cinder_config {
+    'glance/api_servers':  value  => $glance_endpoint,
 }
 Nova_config <||> ~> Service[$services]
-Glance_config <||> ~> Service[$services]
+Cinder_config <||> ~> Service[$services]
+

@@ -1,8 +1,8 @@
-- id: "glance_net_VIP"
+- id: "glance/vip"
   default_mapping: "glance"
   properties:
     subnet: false
     gateway: false
     vip:
-       - name: "glance_network"
+       - name: "glance"
          namespace: "haproxy"
