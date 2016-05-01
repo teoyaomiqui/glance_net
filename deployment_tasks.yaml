@@ -21,7 +21,7 @@
     puppet_modules: /etc/puppet/modules
     timeout: 300
 
-- id: glance_net_service_configs.pp
+- id: glance_net_service_configs
   type: puppet
   groups: ['primary-controller', 'controller', 'compute', 'cinder']
   requires: ['glance']

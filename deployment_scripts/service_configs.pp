@@ -1,4 +1,4 @@
-notice('MODULAR: service_configs.pp')
+notice('MODULAR: glance_net_service_configs.pp')
 $services           = ['nova-api', 'nova-scheduler', 'cinder-api']
 $network_metadata   = hiera_hash('network_metadata')
 $glance_endpoint    = $network_metadata['vips']['glance']['ipaddr']
