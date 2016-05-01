@@ -7,10 +7,10 @@ This plugin is designed to redirect image ralated(glance) network traffic away f
 
 Requirement:
   - New network-group called 'glance' has to to be created in fuel CLI:
-      1) find out your node-group id with the following command:
-           'fuel network-group'
-      2) create new network-group, example command:
-      'fuel network-group --create --node-group=<enter your node-group id> --name='glance --cidr=10.109.16.1'
+      - find out your node-group id with the following command:
+          'fuel network-group'
+      - create new network-group, example command:
+          'fuel network-group --create --node-group=<enter your node-group id> --name='glance --cidr=10.109.16.1'
 
 In this build plugin does the following:
 
