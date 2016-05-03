@@ -7,10 +7,10 @@ service{ $services:
     ensure => running,
 }
 nova_config {
-    'glance/api_servers':  value  => '$glance_endpointi:9292',
+    'glance/api_servers':  value  => $glance_endpointi':9292',
 }
 cinder_config {
-    'DEFAULT/glance_api_servers':  value  => '$glance_endpoint:9292',
+    'DEFAULT/glance_api_servers':  value  => $glance_endpoint':9292',
 }
 
 Cinder_config <||> ~> Service['cinder-api']
