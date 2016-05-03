@@ -24,7 +24,7 @@
 - id: glance_net_nova_config
   type: puppet
   groups: ['primary-controller', 'controller']
-  groups: ['heat']
+  requires: ['heat']
   parameters:
     puppet_manifest: nova_config.pp
     puppet_modules: /etc/puppet/modules
