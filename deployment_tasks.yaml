@@ -21,11 +21,11 @@
     puppet_modules: /etc/puppet/modules
     timeout: 300
 
-- id: glance_net_nova_config
+- id: glance_net_service_configs
   type: puppet
   groups: ['primary-controller', 'controller']
   requires: ['heat']
   parameters:
-    puppet_manifest: nova_config.pp
+    puppet_manifest: service_configs.pp
     puppet_modules: /etc/puppet/modules
     timeout: 300
