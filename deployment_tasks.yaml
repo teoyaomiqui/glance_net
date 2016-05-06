@@ -13,9 +13,8 @@
 
 - id: glance_net_ha_endpoint
   type: puppet
-  groups: ['primary-controller']
-  requires: ['glance-keystone']
-  required_for: ['upload_cirros']
+  groups: ['primary-controller', 'controller']
+  requires: ['heat']
   parameters:
     puppet_manifest: ha_endpoint.pp
     puppet_modules: /etc/puppet/modules
@@ -29,3 +28,12 @@
     puppet_manifest: service_configs.pp
     puppet_modules: /etc/puppet/modules
     timeout: 300
+
+- id: glance_net_compute
+  type: puppet
+  groups: ['compute']
+  requires: ['openstack-network-compute-nova']
+  parameters:
+    puppet_manifest: nova_compute.pp
+    puppet_modules: /etc/puppet/modules
+    timeout: 150
